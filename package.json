@@ -21,6 +21,12 @@
   "main": "dist/main.js",
   "types": "dist/types.d.ts",
   "type": "module",
+  "files": [
+    "dist/main.js",
+    "dist/main.js.map",
+    "dist/types.d.ts",
+    "dist/types.d.ts.map"
+  ],
   "scripts": {
     "watch": "parcel watch",
     "build": "parcel build",
@@ -33,7 +39,7 @@
     "lint": "eslint **/*.ts",
     "lint:fix": "npm run lint -- --fix",
     "fmt": "prettier --write **/*.ts",
-    "prepack": "npm run build",
+    "prepack": "rimraf dist && npm run build",
     "prepare": "husky install"
   },
   "husky": {
