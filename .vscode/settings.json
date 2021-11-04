@@ -5,8 +5,26 @@
         "hasFile: coverage/lcov.info"
       ],
       "command": "coverage-gutters.watchCoverageAndVisibleEditors",
-      "message": "Coverage Watch"
+      "message": "Running coverage"
     }
   ],
-  "todo-tree.tree.scanMode": "workspace only"
+  "restoreTerminals.terminals": [
+    {
+      "splitTerminals": [
+        {
+          "name": "coverage",
+          "commands": [
+            "npm run cov:watch"
+          ]
+        },
+        {
+          "name": "zsh",
+          "commands": []
+        }
+      ]
+    },
+  ],
+  "todo-tree.tree.scanMode": "workspace only",
+  "jest.jestCommandLine": "./node_modules/.bin/jest",
+  "npm-scripts.showStartNotification": false
 }

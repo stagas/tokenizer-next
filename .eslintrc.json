@@ -12,7 +12,13 @@
     "plugin:@typescript-eslint/recommended",
     "plugin:prettier/recommended"
   ],
-  "plugins": [],
+  "ignorePatterns": [
+    "dist",
+    "node_modules"
+  ],
+  "plugins": [
+    "import"
+  ],
   "rules": {
     "@typescript-eslint/no-non-null-assertion": "off"
   }

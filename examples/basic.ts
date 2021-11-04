@@ -1,4 +1,4 @@
-import { createTokenizer } from '../../src/index'
+import { createTokenizer } from '../src'
 
 const tokenize = createTokenizer(
   /(?<ident>[a-z]+)/, // named groups determine token `kind`
