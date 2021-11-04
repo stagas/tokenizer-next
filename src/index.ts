@@ -9,7 +9,7 @@ import { joinRegExps } from './util'
  *
  * ```ts
  * const tokenize = createTokenizer(
- *   /(?<ident>[a-z]+)/,
+ *   /(?<ident>[a-z]+)/, // named groups determine token `group`
  *   /(?<number>[0-9]+)/
  * )
  * ```
