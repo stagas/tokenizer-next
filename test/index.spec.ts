@@ -1,4 +1,4 @@
-import Tokenizer from './'
+import Tokenizer from '../src'
 
 describe('tokenizer(...regexps)', () => {
   it('should return an iterator function', () => {
