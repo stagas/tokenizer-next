@@ -1,5 +1,5 @@
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-import { matchToToken, TokenReturn, Token } from 'match-to-token'
+import { matchToToken, MatchToken, Token } from 'match-to-token'
 import { joinRegExps } from './util'
 
 /**
@@ -22,9 +22,9 @@ export const createTokenizer = (...regexps: RegExp[]) => {
   return <TokenizerFactory>((input: string) => {
     const matches = input.matchAll(regexp)
 
-    const next = (): TokenReturn => matchToToken(matches.next().value)
+    const next = (): MatchToken | null => matchToToken(matches.next().value)
 
-    const iterator = function* (token: TokenReturn) {
+    const iterator = function* (token: MatchToken | null) {
       while ((token = next())) yield token
     }
 
@@ -71,6 +71,6 @@ export type TokenizerFactory = (input: string) => TokenizerCallableIterable
  * [Iterable](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol)
  * on **for-of** and **spread** operations.
  */
-export type TokenizerCallableIterable = (() => TokenReturn) & Iterable<TokenReturn>
+export type TokenizerCallableIterable = (() => Token) & Iterable<Token>
 
 export default createTokenizer

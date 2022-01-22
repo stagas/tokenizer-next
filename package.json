@@ -99,6 +99,6 @@
     "vite-open": "^1.1.0"
   },
   "dependencies": {
-    "match-to-token": "^1.0.0"
+    "match-to-token": "^2.0.1"
   }
 }

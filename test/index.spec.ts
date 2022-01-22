@@ -14,7 +14,7 @@ describe('tokenizer(...regexps)', () => {
     expect(token.group).toEqual('ident')
     expect(token.index).toEqual(6)
     token = next()
-    expect(token).toBeUndefined()
+    expect(token).toBeNull()
   })
 
   it('should also be an iterator instance', () => {
@@ -30,7 +30,7 @@ describe('tokenizer(...regexps)', () => {
     const tokens = [...iterator]
     expect(tokens.map(x => [x!.group, x!.value])).toEqual([
       ['ident', 'hello'],
-      ['number', '123']
+      ['number', '123'],
     ])
   })
 
