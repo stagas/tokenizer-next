@@ -13,7 +13,7 @@ iterator based tokenizer for writing parsers
  · <a href="https://github.com/stagas/tokenizer-next/issues">   🖐️ <strong>Help</strong></a>
 </p>
 
----
+***
 
 ## Install
 
@@ -37,15 +37,15 @@ See [TokenizerFactory](#tokenizerfactory).
 
 #### Table of Contents
 
-- [createTokenizer](#createtokenizer)
-  - [Parameters](#parameters)
-- [TokenizerFactory](#tokenizerfactory)
-  - [Parameters](#parameters-1)
-- [TokenizerCallableIterable](#tokenizercallableiterable)
+*   [createTokenizer](#createtokenizer)
+    *   [Parameters](#parameters)
+*   [TokenizerFactory](#tokenizerfactory)
+    *   [Parameters](#parameters-1)
+*   [TokenizerCallableIterable](#tokenizercallableiterable)
 
 ### createTokenizer
 
-[src/index.ts:19-37](https://github.com/stagas/tokenizer-next/blob/c23a53a4be8e46b64d92477d01dea8f86d9c4eea/src/index.ts#L19-L37 'Source code on GitHub')
+[src/index.ts:19-37](https://github.com/stagas/tokenizer-next/blob/d7ac15bc32521300c55c80a1b8f3952f47e81a67/src/index.ts#L19-L37 "Source code on GitHub")
 
 Create a [TokenizerFactory](#tokenizerfactory) for the given RegExps.
 
@@ -60,11 +60,11 @@ const tokenize = createTokenizer(
 
 #### Parameters
 
-- `regexps` **...[Array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array)<[RegExp](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/RegExp)>** RegExps to match.
+*   `regexps` **...[Array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array)<[RegExp](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/RegExp)>** RegExps to match.
 
 ### TokenizerFactory
 
-[src/index.ts:67-67](https://github.com/stagas/tokenizer-next/blob/c23a53a4be8e46b64d92477d01dea8f86d9c4eea/src/index.ts#L39-L66 'Source code on GitHub')
+[src/index.ts:67-67](https://github.com/stagas/tokenizer-next/blob/d7ac15bc32521300c55c80a1b8f3952f47e81a67/src/index.ts#L39-L66 "Source code on GitHub")
 
 Create a [TokenizerCallableIterable](#tokenizercallableiterable) for given input string.
 
@@ -95,11 +95,11 @@ Type: function (input: [string](https://developer.mozilla.org/docs/Web/JavaScrip
 
 #### Parameters
 
-- `input` The string to tokenize.
+*   `input`  The string to tokenize.
 
 ### TokenizerCallableIterable
 
-[src/index.ts:74-75](https://github.com/stagas/tokenizer-next/blob/c23a53a4be8e46b64d92477d01dea8f86d9c4eea/src/index.ts#L69-L73 'Source code on GitHub')
+[src/index.ts:74-74](https://github.com/stagas/tokenizer-next/blob/d7ac15bc32521300c55c80a1b8f3952f47e81a67/src/index.ts#L69-L73 "Source code on GitHub")
 
 Can be called to return next <a href="https://github.com/stagas/match-to-token#token">Token</a> or can be used as an
 [Iterable](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol)
