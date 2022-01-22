@@ -1,5 +1,6 @@
 /**
  * Utility to join RegExps together.
+ * @private
  */
 export const joinRegExps = (regexps: RegExp[]) =>
   new RegExp(
