@@ -29,7 +29,7 @@ export const createTokenizer = (...regexps: RegExp[]) => {
     }
 
     Object.defineProperty(next, Symbol.iterator, {
-      value: iterator
+      value: iterator,
     })
 
     return <TokenizerCallableIterable>next
@@ -71,7 +71,6 @@ export type TokenizerFactory = (input: string) => TokenizerCallableIterable
  * [Iterable](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol)
  * on **for-of** and **spread** operations.
  */
-export type TokenizerCallableIterable = (() => TokenReturn) &
-  Iterable<TokenReturn>
+export type TokenizerCallableIterable = (() => TokenReturn) & Iterable<TokenReturn>
 
 export default createTokenizer
